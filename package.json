@@ -1,0 +1,25 @@
+{
+  "name": "little",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "heath",
+  "license": "ISC",
+  "dependencies": {
+    "@mysql/xdevapi": "^8.0.24",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "json-server": "^0.16.3",
+    "knex": "^0.95.4",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "@types/mysql": "^2.15.18",
+    "nodemon": "^2.0.7"
+  }
+}

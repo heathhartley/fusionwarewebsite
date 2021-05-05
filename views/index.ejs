@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to Vue</title>
+<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="app">
+<img src="https://vuejs.org/images/logo.png" alt="Vue logo">
+<h1>{{ greeting2 }}</h1>
+
+
+     <% for (var i = 0; i < test.length; i++) { %>
+<p> <%= test[i].Fisrt_Name_Character + " is played by " + test[i].Actor_Name%></p><% } %> 
+
+<p>Some of these people are {{ title }}. Guess which ones</p>
+<li v-for="todo in todos">
+    {{ User.First_Name_Character }}
+  </li>
+
+<script>
+import axios from 'axios';
+
+var app = new Vue({
+el: '#app',
+data () {
+    return{
+      User :{},
+    }
+  },
+  mounted(){
+    axios.get('http://localhost:3000/')
+    .then((response) =>{ 
+    console.log(response.data);
+    this.User = response.data;
+  })
+
+  .catch((error) =>{
+    console.log(error);
+  } );
+  },
+methods: {
+}
+})
+</script>
+</body>
+</html>
+
